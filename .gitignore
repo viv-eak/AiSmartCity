@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+*.log
+ollama-data/
+postgres-data/
+kafka-data/
+zookeeper-data/
+.DS_Store

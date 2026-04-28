@@ -1,0 +1,20 @@
+{
+  "name": "smart-city-ai",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n gateway,auth,complaint,ai,notification,analytics -c blue,green,yellow,magenta,cyan,white \"npm run dev -w packages/api-gateway\" \"npm run dev -w packages/auth-service\" \"npm run dev -w packages/complaint-service\" \"npm run dev -w packages/ai-service\" \"npm run dev -w packages/notification-service\" \"npm run dev -w packages/analytics-service\"",
+    "dev:frontend": "npm run dev -w packages/frontend",
+    "build": "npm run build --workspaces --if-present",
+    "migrate": "npm run migrate -w packages/shared",
+    "test": "vitest run --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.1.1"
+  }
+}

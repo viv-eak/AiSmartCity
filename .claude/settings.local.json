@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(docker --version)",
+      "Bash(chmod +x:*)",
+      "Bash(git init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx create-vite:*)",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}
